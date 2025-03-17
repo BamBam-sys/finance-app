@@ -23,19 +23,13 @@ const TableHeader = () => {
       />
 
       <div className="flex items-center gap-6 ">
-        <ComboBox name="Sort by" options={sortBy} className="hidden md:flex" />
-        <button className="md:hidden">
-          <SortIcon />
-        </button>
+        <ComboBox name="Sort by" options={sortBy} mobileIcon={<SortIcon />} />
 
         <ComboBox
           name="Category"
           options={category}
-          className="hidden md:flex"
+          mobileIcon={<FilterIcon />}
         />
-        <button className="md:hidden">
-          <FilterIcon />
-        </button>
       </div>
     </div>
   );
