@@ -1,9 +1,6 @@
 import TableHeader from './components/TableHeader';
-import TransactionItem from './components/TransactionItem';
-import data from '@/data.json';
 import TransactionListHeader from './components/TransactionListHeader';
-
-const transactions = data.transactions;
+import TransactionList from './components/TransactionList';
 
 const Transactions = () => {
   return (
@@ -17,19 +14,7 @@ const Transactions = () => {
         {/* transaction list header */}
         <TransactionListHeader />
         {/* table list */}
-        <div className="mt-6">
-          {transactions.map((transaction, index) => (
-            <TransactionItem
-              key={transaction.name + index}
-              amount={transaction.amount}
-              avatar={transaction.avatar}
-              category={transaction.category}
-              date={transaction.date}
-              name={transaction.name}
-              recurring={transaction.recurring}
-            />
-          ))}
-        </div>
+        <TransactionList className="mt-6" />
       </div>
     </section>
   );
