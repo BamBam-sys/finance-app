@@ -32,7 +32,7 @@ const links = [
     icon: <Pots />,
   },
   {
-    link: 'Recurring Bills',
+    link: 'Recurring bills',
     href: '/recurring-bills',
     icon: <RecurringBills />,
   },
@@ -63,7 +63,7 @@ const MobileMenu = (props: HTMLAttributes<HTMLDivElement>) => {
           <span className={pathname === link.href ? 'text-green' : ''}>
             {link.icon}
           </span>
-          <span className="hidden md:block">{link.link}</span>
+          <span className="hidden md:block text-center">{link.link}</span>
         </Link>
       ))}
     </div>
