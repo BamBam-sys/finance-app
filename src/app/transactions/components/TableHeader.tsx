@@ -1,6 +1,6 @@
 import FilterIcon from '@/assets/icons/FilterIcon';
 import SortIcon from '@/assets/icons/SortIcon';
-import ComboBox from '@/components/ComboBox';
+import ComboBox from '@/app/transactions/components/ComboBox';
 import SearchInput from '@/components/SearchInput';
 
 const sortBy = ['Latest', 'Oldest', 'A to Z', 'Z to A', 'Highest', 'Lowest'];

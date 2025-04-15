@@ -32,8 +32,6 @@ const TransactionList = (props: HTMLAttributes<HTMLDivElement>) => {
     indexOfLastTransaction
   );
 
-  console.log(currentTransactions);
-
   return (
     <div className={twMerge('', className)}>
       {currentTransactions.length > 0 ? (

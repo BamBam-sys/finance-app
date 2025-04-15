@@ -7,37 +7,6 @@
     @apply bg-black;
   }
 
-  body {
-    @apply text-grey-900 font-public-sans;
-  }
-
-  .text-1 {
-    @apply text-[32px] font-bold leading-[120%] tracking-[0];
-  }
-
-  .text-2 {
-    @apply text-[20px] font-bold leading-[120%] tracking-[0];
-  }
-
-  .text-3 {
-    @apply text-[16px] font-bold leading-[150%] tracking-[0];
-  }
-
-  .text-4 {
-    @apply text-[14px] leading-[150%] tracking-[0];
-  }
-
-  .text-4-bold {
-    @apply text-4 font-bold;
-  }
-
-  .text-5 {
-    @apply text-[12px] leading-[150%] tracking-[0];
-  }
-
-  .text-5-bold {
-    @apply text-5 font-bold;
-  }
   :root {
     --background: 0 0% 100%;
 
@@ -140,23 +109,64 @@
   }
 }
 
-.scrollbar::-webkit-scrollbar {
-  @apply w-1;
-}
-
-.scrollbar::-webkit-scrollbar-track {
-  /* @apply mt-[1rem]; */
-}
-
-.scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-slate-300 max-h-[10px] rounded-[100vh];
-}
-
-@layer base {
-  /* * {
-    @apply border-border;
-  }
+@layer components {
   body {
-    @apply bg-background text-foreground;
-  } */
+    @apply text-grey-900 font-public-sans;
+  }
+
+  .text-1 {
+    @apply text-[32px] font-bold leading-[120%] tracking-[0];
+  }
+
+  .text-2 {
+    @apply text-[20px] font-bold leading-[120%] tracking-[0];
+  }
+
+  .text-3 {
+    @apply text-[16px] font-bold leading-[150%] tracking-[0];
+  }
+
+  .text-4 {
+    @apply text-[14px] leading-[150%] tracking-[0];
+  }
+
+  .text-4-bold {
+    @apply text-4 font-bold;
+  }
+
+  .text-5 {
+    @apply text-[12px] leading-[150%] tracking-[0];
+  }
+
+  .text-5-bold {
+    @apply text-5 font-bold;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    /* @apply mt-[1rem]; */
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 max-h-[10px] rounded-[100vh];
+  }
+
+  .scroll-smooth-custom {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* For iOS devices */
+  }
 }
