@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client';
 import React, { HTMLAttributes, useEffect, useState } from 'react';
 import TransactionItem from './TransactionItem';
